@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">myBio</string>
+    <string name="my_name">Laode Muhamad Fitrah Ramadhan</string>
+    <string name="my_job">College</string>
+    <string name="my_job_place">State Polytechnic of Ujung Pandang</string>
+    <string name="my_list_button1">Biodata Details</string>
+    <string name="my_list_button2">Experiences</string>
+    <string name="my_list_button3">Contacts</string>
+
+</resources>
