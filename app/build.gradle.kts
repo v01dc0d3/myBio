@@ -8,7 +8,7 @@ android {
 
     defaultConfig {
         applicationId = "com.example.mybio"
-        minSdk = 24
+        minSdk = 26
         targetSdk = 33
         versionCode = 1
         versionName = "1.0"
@@ -39,5 +39,7 @@ dependencies {
     implementation("com.github.PhilJay:MPAndroidChart:v3.1.0")
     implementation("com.mikhaellopez:circularimageview:4.3.1")
     implementation("com.google.android.material:material:1.9.0")
+    implementation("com.readystatesoftware.sqliteasset:sqliteassethelper:+")
+
 
 }

@@ -6,5 +6,18 @@
     <string name="my_list_button1">Biodata Details</string>
     <string name="my_list_button2">Experiences</string>
     <string name="my_list_button3">Contacts</string>
-
+    <string-array name="opsi_bulan">
+        <item>Januari</item>
+        <item>Februari</item>
+        <item>Maret</item>
+        <item>April</item>
+        <item>Mei</item>
+        <item>Juni</item>
+        <item>Juli</item>
+        <item>Agustus</item>
+        <item>September</item>
+        <item>Oktober</item>
+        <item>November</item>
+        <item>Desember</item>
+    </string-array>
 </resources>

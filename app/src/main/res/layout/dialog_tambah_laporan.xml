@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="250dp"
+    android:layout_width="300dp"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:paddingHorizontal="20dp"
@@ -28,51 +28,76 @@
                 android:layout_width="match_parent"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
-                android:hint="Total Pendapatan"
-                app:startIconDrawable="@drawable/attach_money">
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/tie_total"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"></com.google.android.material.textfield.TextInputEditText>
-            </com.google.android.material.textfield.TextInputLayout>
-        </TableRow>
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp">
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_weight="1"
-                android:layout_height="wrap_content"
                 android:hint="Tanggal"
+                android:paddingRight="10dp"
                 app:startIconDrawable="@drawable/calendar_today">
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/tie_tanggal"
+                    android:id="@+id/idTVSelectedDate"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"></com.google.android.material.textfield.TextInputEditText>
             </com.google.android.material.textfield.TextInputLayout>
-
+            <Button
+                android:backgroundTint="#5B9DFF"
+                android:id="@+id/idBtnPickDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Pick Date"
+                android:textAllCaps="false" />
         </TableRow>
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp">
-
+            android:layout_marginTop="20dp"
+            app:startIconDrawable="@drawable/person">
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
-                android:hint="Vendor"
-                app:startIconDrawable="@drawable/integration_instructions">
+                android:hint="GrabFood"
+                app:startIconDrawable="@drawable/attach_money">
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/tie_vendor"
+                    android:id="@+id/totalGrabFood"
+                    android:layout_width="match_parent"
+                    android:inputType="number"
+                    android:layout_height="wrap_content"></com.google.android.material.textfield.TextInputEditText>
+            </com.google.android.material.textfield.TextInputLayout>
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            app:startIconDrawable="@drawable/person">
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:hint="ShopeeFood"
+                app:startIconDrawable="@drawable/attach_money">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/totalShopeeFood"
+                    android:layout_width="match_parent"
+                    android:inputType="number"
+                    android:layout_height="wrap_content"></com.google.android.material.textfield.TextInputEditText>
+            </com.google.android.material.textfield.TextInputLayout>
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            app:startIconDrawable="@drawable/person">
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:hint="GoFood"
+                app:startIconDrawable="@drawable/attach_money">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/totalGoFood"
+                    android:inputType="number"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"></com.google.android.material.textfield.TextInputEditText>
             </com.google.android.material.textfield.TextInputLayout>
-
         </TableRow>
-
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
