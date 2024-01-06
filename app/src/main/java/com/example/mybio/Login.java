@@ -18,6 +18,8 @@ import com.google.android.material.button.MaterialButton;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textview.MaterialTextView;
 
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -59,8 +61,10 @@ public class Login extends AppCompatActivity {
                         Log.d("db_email", db_email);
 
                         password = tiePassword.getText().toString();
+                        String md5_password = md5(password);
                         String db_password = cursor.getString(cursor.getColumnIndexOrThrow ("password"));
-                        if (password.equals(db_password)) {
+
+                        if (md5_password.equals(db_password)) {
                             Log.d("db_password", db_password);
                             String db_role_id = cursor.getString(cursor.getColumnIndexOrThrow ("role_id"));
                             if ( db_role_id.toString().equals("1") ) {
@@ -87,5 +91,30 @@ public class Login extends AppCompatActivity {
                 db.close();
             }
         });
+    }
+
+    public static String md5(final String s) {
+        final String MD5 = "MD5";
+        try {
+            // Create MD5 Hash
+            MessageDigest digest = java.security.MessageDigest
+                    .getInstance(MD5);
+            digest.update(s.getBytes());
+            byte messageDigest[] = digest.digest();
+
+            // Create Hex String
+            StringBuilder hexString = new StringBuilder();
+            for (byte aMessageDigest : messageDigest) {
+                String h = Integer.toHexString(0xFF & aMessageDigest);
+                while (h.length() < 2)
+                    h = "0" + h;
+                hexString.append(h);
+            }
+            return hexString.toString();
+
+        } catch (NoSuchAlgorithmException e) {
+            e.printStackTrace();
+        }
+        return "";
     }
 }

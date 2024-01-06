@@ -17,7 +17,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
         String sql = "CREATE TABLE users (id_user INTEGER PRIMARY KEY AUTOINCREMENT, username TEXT NOT NULL, email TEXT NOT NULL, password TEXT NOT NULL, role_id INTEGER NOT NULL);";
         db.execSQL(sql);
-        sql = "INSERT INTO users VALUES(NULL, 'Nunu Twins', 'nunutwins@gmail.com', '12345678', '1');";
+        sql = "INSERT INTO users VALUES(NULL, 'Nunu Twins', 'nunutwins@gmail.com', '879471af36d07916b7f83b4653f1360d', '1');";
         db.execSQL(sql);
 
         sql = "CREATE TABLE roles (id_role INTEGER PRIMARY KEY AUTOINCREMENT, rolename TEXT NOT NULL);";
